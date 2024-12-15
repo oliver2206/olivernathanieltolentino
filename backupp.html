@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Ilocos Sur</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="Slider.css">
+  <link rel="stylesheet" href="basket.cs">
+  <link rel="stylesheet" href="boxes.css">
+  <link rel="stylesheet" href="./ADD TO CART.css">
+  <link rel="stylesheet" href="dropdown.css">
+  <link rel="stylesheet" href="dropdown 2.cs">
+  <link rel="stylesheet" href="categories.cs">
+  <link rel="stylesheet" href="./Juan Ilocos Sur Page Image.cs">
+  <link rel="stylesheet" href="./Gallery button.">
+  <link rel="stylesheet" href="./checkout.css">
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <!-- Header Top Bar -->
+  <div class="header-top">
+    <span class="carousel-text"></span>
+  </div>
+
+  <!-- Main Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="juan.png" alt="Logo">
+      </a>
+    </div>
+    <body>
+      <div class="dropdown">
+        <a href="#">Town Products</a>
+        <div class="dropdown-menu">
+            <a href="./Alilem.html">Alilem</a>
+            <a href="#">Banayoyo</a>
+            <a href="#">Bantay</a>
+            <a href="#">Burgos</a>
+            <a href="#">Cabugao</a>
+            <a href="#">Caoayan</a>
+            <a href="#">Cervantes</a>
+            <a href="#">Galimuyod</a>
+            <a href="#">Gregorio del Pilar (Concepcion)</a>
+            <a href="#">Lidlidda</a>
+            <a href="#">Magsingal</a>
+            <a href="#">Nagbukel</a>
+            <a href="#">Narvacan</a>
+            <a href="#">Quirino (Angkaki)</a>
+            <a href="#">Salcedo (Baugen)</a>
+            <a href="#">San Emilio</a>
+            <a href="#">San Esteban</a>
+            <a href="#">San Ildefonso</a>
+            <a href="#">San Juan (Lapog)</a>
+            <a href="#">San Vicente</a>
+            <a href="#">Santa</a>
+            <a href="#">Santa Catalina</a>
+            <a href="#">Santa Cruz</a>
+            <a href="#">Santa Lucia</a>
+            <a href="#">Santa Maria</a>
+            <a href="#">Santiago</a>
+            <a href="#">Santo Domingo</a>
+            <a href="#">Sigay</a>
+            <a href="#">Sinait</a>
+            <a href="#">Sugpon</a>
+            <a href="#">Suyo</a>
+            <a href="#">Tagudin</a>
+            
+          
+        </div>
+    </div>
+    <body>
+      <div class="dropdown">
+          <a href="#">Categories</a>
+          <div class="dropdown-menu">
+              <a href="#">Alcohol</a>
+              <a href="#">Snacks</a>
+              <a href="#">HandCrafts</a>
+              <a href="#">Dr</a>
+          </div>
+      </div>
+      <body>
+        <div class="dropdown">
+            <a href="#">Contacts</a>
+            <div class="dropdown-menu">
+                <a href="#">Alilem</a>
+                <a href="#">Banayoyo</a>
+                <a href="#">Servantes</a>
+                <a href="#">Other Towns</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Search and Basket -->
+    <nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search" oninput="showSuggestions(this.value)">
+        <button onclick="searchFunction()">Search</button>
+        <div id="suggestions-box" class="suggestions"></div>
+      </div>
+      <button id="basket-button" onclick="toggleBasket()">Basket (<span id="basket-count">0</span>)</button>
+    </nav>
+  </header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-container">
+      <div class="product-container">
+          <div class="product-image">
+                <img id="main-image" src="./01-Ilocos-Sur-Vigan-Travel.jpg" alt="Main Product Image">
+                <div class="product-previews">
+                  <img src="./01-Ilocos-Sur-Vigan-Travel.jpg" alt="Preview 1">
+                  <img src="./01-Ilocos-Sur-Vigan-Travel.png" alt="Preview 2">
+                  <img src="./01-Ilocos-Sur-Vigan-Travel.jpg" alt="Preview 3">
+                  <img src="./01-Ilocos-Sur-Vigan-Travel.png" alt="Preview 4">
+                  <img src="./01-Ilocos-Sur-Vigan-Travel.jpg" alt="Preview 1">
+                  <img src="./01-Ilocos-Sur-Vigan-Travel.png" alt="Preview 2">
+                  <img src="./01-Ilocos-Sur-Vigan-Travel.jpg" alt="Preview 3">
+                  <img src="./01-Ilocos-Sur-Vigan-Travel.png" alt="Preview 4">
+                </div>
+              </div>
+        
+              <div class="product-details">
+                <div class="product-title">Plain Special Pastillas 25pcs. Pure Carabao's Milk</div>
+                <div class="product-rating">⭐ 4.8 | 1K Ratings | 5.7K Sold</div>
+                <div class="product-price">₱99</div>
+                <div class="shipping-info">Shipping To: Magsingal, Ilocos Sur<br>Shipping Fee: ₱58</div>
+                <div class="stock-info">1290 pieces available</div>
+        
+                <div class="product-variations">
+                  <label for="product-variation">Choose Variation:</label>
+                  <div class="variation-options">
+                    <div class="variation-box">Plain Special Pastillas</div>
+                    <div class="variation-box">Chocolate Coated</div>
+                    <div class="variation-box">Mango Flavor</div>
+                  </div>
+                </div>
+        
+             
+        
+              <div class="product-buttons">
+                  <button onclick="addToBasket('Plain Special Pastillas 25pcs. Pure Carabao', 99, './01-Ilocos-Sur-Vigan-Travel.jpg')">Add to Cart</button>
+                  <button class="buy-now">Buy Now</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(./01-Ilocos-Sur-Vigan-Travel.jpg); /* Add your background image here */
+    background-size: cover; /* Ensures the background image covers the entire screen */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Makes the background image fixed while scrolling */
+    color: #000000;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    background: #00000094;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-image {
+    flex: 1 1 400px;
+    text-align: center;
+  }
+
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .product-details {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .product-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .product-rating {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+
+  .product-price {
+    font-size: 28px;
+    color: #e63946;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .shipping-info, .stock-info {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .product-variations {
+    margin-bottom: 20px;
+  }
+
+  .variation-options {
+    display: flex;
+    gap: 10px;
+  }
+
+  .variation-box {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .variation-box:hover {
+    background-color: #e63946;
+    color: rgb(218, 28, 28);
+    transform: scale(1.05);
+  }
+
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .quantity-control input {
+    width: 50px;
+    text-align: center;
+  }
+
+  .product-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .product-buttons button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .product-buttons button:first-child {
+    background-color: #16b92f;
+    color: white;
+  }
+
+  .product-buttons .buy-now {
+    background-color: #e63946;
+    color: white;
+  }
+
+  .product-buttons button:hover {
+    opacity: 0.9;
+  }
+
+  .product-previews {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .product-previews img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+
+  .product-previews img:hover {
+    transform: scale(1.1);
+    border-color: #e63946;
+  }
+
+  .product-previews img.selected {
+    border-color: #e63946;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const mainImage = document.getElementById('main-image');
+    const previewImages = document.querySelectorAll('.product-previews img');
+
+    // Handle click on preview images to change the main image
+    previewImages.forEach(img => {
+      img.addEventListener('click', () => {
+        // Update main image source
+        mainImage.src = img.src;
+
+        // Update selected class
+        previewImages.forEach(preview => preview.classList.remove('selected'));
+        img.classList.add('selected');
+      });
+    });
+
+    // Quantity control logic
+    const quantityInput = document.querySelector('.quantity-control input');
+    const minusButton = document.querySelector('.quantity-control button:first-child');
+    const plusButton = document.querySelector('.quantity-control button:last-child');
+
+    minusButton.addEventListener('click', () => {
+      if (quantityInput.value > 1) {
+        quantityInput.value--;
+      }
+    });
+
+    plusButton.addEventListener('click', () => {
+      quantityInput.value++;
+    });
+
+    // Handle variation click to change the main image
+    const variationBoxes = document.querySelectorAll('.variation-box');
+    variationBoxes.forEach(variation => {
+      variation.addEventListener('click', () => {
+        const variationText = variation.innerText;
+
+        // Update the main image based on selected variation
+        switch (variationText) {
+          case 'Plain Special Pastillas':
+            mainImage.src = './01-Ilocos-Sur-Vigan-Travel.jpg'; // Example image path
+            break;
+          case 'Chocolate Coated':
+            mainImage.src = './01-Ilocos-Sur-Vigan-Travel.png'; // Example image path
+            break;
+          case 'Mango Flavor':
+            mainImage.src = './01-Ilocos-Sur-Vigan-Travel.jpg'; // Example image path
+            break;
+          default:
+            break;
+        }
+      });
+    });
+  });
+
+  // Add to Cart function
+  function addToBasket(imageSrc, quantity, variation) {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const quantityToAdd = 5; // Always add 5 items to the cart
+
+    const product = {
+      image: imageSrc,
+      quantity: quantityToAdd, // Set quantity to 5
+      variation: variation
+    };
+
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert(`Product added to cart! Quantity: ${quantityToAdd}`);
+  }
+</script>
+
+
+
+  <!-- Basket Overlay --><div class="basket-overlay" id="basket-overlay">
+    <div class="basket-header">Your Basket</div>
+    
+    <div class="basket-items" id="basket-items">
+        <!-- Cart items will be dynamically added here -->
+    </div>
+    
+    <div class="basket-total" id="basket-total">Total: Php 0</div>
+    
+    <!-- Payment Method, Delivery Address, Delivery Option, and Voucher Code Section -->
+    <div class="basket-options">
+        <!-- Payment Method -->
+        <div class="payment-method">
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" class="payment-method">
+                <option value="default">Select Payment Method</option>
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="cash-on-delivery">Cash on Delivery</option>
+            </select>
+        </div>
+        
+        <!-- Delivery Address -->
+        <div class="delivery-address">
+            <label for="delivery-address">Delivery Address:</label>
+            <select id="delivery-address" class="delivery-address">
+                <option value="default">Select Delivery Address</option>
+                <option value="home">Home Address</option>
+                <option value="work">Work Address</option>
+                <option value="other">Other Address</option>
+            </select>
+        </div>
+
+        <!-- Delivery Option -->
+        <div class="delivery-option">
+            <label for="delivery-option">Delivery Option:</label>
+            <select id="delivery-option" class="delivery-option">
+                <option value="standard" data-price="0">Standard Delivery (Free)</option>
+                <option value="express" data-price="50">Express Delivery (Php 50)</option>
+            </select>
+        </div>
+
+        <!-- Voucher Code -->
+        <div class="voucher-code">
+            <label for="voucher-code">Voucher Code:</label>
+            <input type="text" id="voucher-code" placeholder="Enter voucher code">
+            <button id="apply-voucher">Apply</button>
+            <span id="voucher-message"></span>
+        </div>
+    </div>
+
+    <div class="basket-header">
+      Your Basket
+      <button class="close-icon" onclick="toggleBasket()">&times;</button>
+  </div>
+  
+</div>
+
+<script src="./FUNCTION 1.js"></script>
+<script src="./FUNCTION 2.js"></script>
+<script src="./Quantity.js"></script> 
+<!-- function 3 is search bar function 2 is the check out tc function 1 is basket function -->
+
+  <style>
+    .footer-container {
+        background-color: #f1f1f1;
+        padding: 20px;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer .links a {
+        color: #000;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    .footer .links a:hover {
+        text-decoration: underline;
+    }
+    .footer .social-icons {
+        margin: 10px 0;
+    }
+    .footer .social-icons img {
+        width: 30px;
+        margin: 0 5px;
+    }
+    .footer .payment-methods img {
+        width: 50px;
+        margin: 0 5px;
+    }
+    .footer .copyright {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <div class="banner-container">
+    <div class="slider" style="background-image: url('https://t3.ftcdn.net/jpg/08/88/03/80/360_F_888038041_zNVaUTvBlyqPGMEYnZq0Uaw8Nea4zXjV.jpg'); background-size: cover; background-position: center;">
+      <div class="slider-content">
+        <div class="slider-item">
+          <span class="text">Relish the Journey, Share the Memory – Ilocano Pasalubong from the Heart.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-container">
+    <div class="footer">
+      
+  
+      
+  
+        <div class="payment-methods">
+           
+            <img src="./gcash.png" alt="GCASH">
+            <img src="./pnb.png" alt="PNB">
+            <img src="./bpi.png" alt="BPI">
+            <img src="./SEABANK.png" alt="Shop">
+            <img src="./LANDBANK.png" alt="Visa">
+            <img src="./MASTERCARD.png" alt="MasterCard">
+            <img src="./UNION PAY.png" alt="UnionPay">
+        </div>
+  
+        <div class="copyright">
+            &copy; Juan Ilocos Sur  <br>
+            Powered by Juan De Ilocos 
+        </div>
+    </div>
+  </div>
+  
+  <style>
+    .footer-container {
+        background-color: #f1f1f1;
+        padding: 20px;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer .links a {
+        color: #000;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    .footer .links a:hover {
+        text-decoration: underline;
+    }
+    .footer .social-icons {
+        margin: 10px 0;
+    }
+    .footer .social-icons img {
+        width: 30px;
+        margin: 0 5px;
+    }
+    .footer .payment-methods img {
+        width: 50px;
+        margin: 0 5px;
+    }
+    .footer .copyright {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #666;
+    }
+  </style>
+  </html>
+  
+</body>
+</html>
+
+<script src="./Quantity.js"></script>
+<script src=""></script>
+<script src=""></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const mainImage = document.getElementById('main-image');
+    const previewImages = document.querySelectorAll('.product-previews img');
+
+    previewImages.forEach(img => {
+      img.addEventListener('click', () => {
+        // Update main image source
+        mainImage.src = img.src;
+
+        // Update selected class
+        previewImages.forEach(preview => preview.classList.remove('selected'));
+        img.classList.add('selected');
+      });
+    });
+  });
+ 

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Ilocos Sur</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="Slider.css">
+  <link rel="stylesheet" href="basket.css">
+  <link rel="stylesheet" href="boxes.css">
+  <link rel="stylesheet" href="./ADD TO CART.css">
+  <link rel="stylesheet" href="dropdown.css">
+  <link rel="stylesheet" href="dropdown 2.css">
+  <link rel="stylesheet" href="categories.css">
+
+  <style>
+    
+  </style>
+</head>
+<body>
+  <!-- Header Top Bar -->
+  <div class="header-top">
+    <span class="carousel-text"></span>
+  </div>
+
+  <!-- Main Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="juan.png" alt="Logo">
+      </a>
+    </div>
+    <body>
+      <div class="dropdown">
+        <a href="#">Town Products</a>
+        <div class="dropdown-menu">
+            <a href="./Alilem.html">Alilem</a>
+            <a href="#">Banayoyo</a>
+            <a href="#">Bantay</a>
+            <a href="#">Burgos</a>
+            <a href="#">Cabugao</a>
+            <a href="#">Caoayan</a>
+            <a href="#">Cervantes</a>
+            <a href="#">Galimuyod</a>
+            <a href="#">Gregorio del Pilar (Concepcion)</a>
+            <a href="#">Lidlidda</a>
+            <a href="#">Magsingal</a>
+            <a href="#">Nagbukel</a>
+            <a href="#">Narvacan</a>
+            <a href="#">Quirino (Angkaki)</a>
+            <a href="#">Salcedo (Baugen)</a>
+            <a href="#">San Emilio</a>
+            <a href="#">San Esteban</a>
+            <a href="#">San Ildefonso</a>
+            <a href="#">San Juan (Lapog)</a>
+            <a href="#">San Vicente</a>
+            <a href="#">Santa</a>
+            <a href="#">Santa Catalina</a>
+            <a href="#">Santa Cruz</a>
+            <a href="#">Santa Lucia</a>
+            <a href="#">Santa Maria</a>
+            <a href="#">Santiago</a>
+            <a href="#">Santo Domingo</a>
+            <a href="#">Sigay</a>
+            <a href="#">Sinait</a>
+            <a href="#">Sugpon</a>
+            <a href="#">Suyo</a>
+            <a href="#">Tagudin</a>
+            
+          
+        </div>
+    </div>
+    <body>
+      <div class="dropdown">
+          <a href="#">Categories</a>
+          <div class="dropdown-menu">
+              <a href="#">Alcohol</a>
+              <a href="#">Snacks</a>
+              <a href="#">HandCrafts</a>
+              <a href="#">Dr</a>
+          </div>
+      </div>
+      <body>
+        <div class="dropdown">
+            <a href="#">Contacts</a>
+            <div class="dropdown-menu">
+                <a href="#">Alilem</a>
+                <a href="#">Banayoyo</a>
+                <a href="#">Servantes</a>
+                <a href="#">Other Towns</a>
+            </div>
+        </div>
+    </nav>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search" oninput="showSuggestions(this.value)">
+      <button onclick="searchFunction()">Search</button>
+      <div id="suggestions-box" class="suggestions"></div>
+    </div>
+    <button id="basket-button" onclick="toggleBasket()">Basket (<span id="basket-count">0</span>)</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Juan Ilocos Sur</h1>
+    <p>"Ti Juan Ilocos Sur ket naglaon kadagiti nabaknang a produkto nga agsisimbolo ti nadumaduma nga kultura ken tradisyon!"</p>
+    <p>Scroll Down to See Products</p>
+    
+    <p>Categories</p>
+    <div class="categories">
+      <div class="category">
+        <a href="Hand Crafts.html">
+            <img src="https://via.placeholder.com/50" alt="Men's Apparel">
+            <p>Hand Crafts</p>
+        </a>
+    </div>
+    <div class="category">
+        <a href="Beverages.html">
+            <img src="https://via.placeholder.com/50" alt="Mobiles & Gadgets">
+            <p>Beverages</p>
+        </a>
+    </div>
+    <div class="category">
+        <a href="food.html">
+            <img src="https://via.placeholder.com/50" alt="Consumer Electronics">
+            <p>Food</p>
+        </a>
+    </div>
+    <div class="category">
+        <a href="home-living.html">
+            <img src="https://via.placeholder.com/50" alt="Home & Living">
+            <p>Home & Living</p>
+        </a>
+    </div>
+    <div class="category">
+        <a href="health.html">
+            <img src="https://via.placeholder.com/50" alt="Men's Accessories">
+            <p>Health</p>
+        </a>
+    </div>
+    
+    
+  </div>
+  
+  
+  
+</section>
+
+  
+  <style>
+    /* Hero Section Styles */
+    .hero {
+      background-image: url('./01-Ilocos-Sur-Vigan-Travel.png'); /* Replace with your image path */
+      background-size: cover; /* Makes the image cover the entire section */
+      background-position: center; /* Centers the background image */
+      color: rgba(243, 242, 242, 0.615); /* Text color to make it visible over the background */
+      text-align: center; /* Center align the text */
+      padding: 50px 20px; /* Add padding for spacing */
+    }
+  
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+  
+    .hero p {
+      font-size: 1.5em;
+    }
+  </style>
+
+
+  <div class="banner-container">
+    <div class="slider" style="background-image: url('https://t3.ftcdn.net/jpg/08/88/03/80/360_F_888038041_zNVaUTvBlyqPGMEYnZq0Uaw8Nea4zXjV.jpg'); background-size: cover; background-position: center;">
+        <div class="slider-content">
+            <div class="slider-item">
+                <span class="text"></span>"Savor the Tradition, Wear the Culture – The Essence of Ilocano Craft."</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+    
+  
+    
+  <!-- Product Section 3 -->
+  <div class="product-row">
+    <div class="product-card">
+      <img src="./Magsingal/Hand Crafts of Magsingal.png" alt="Hand Crafts Flower of Magsingal">
+      <h3>Hand Crafts Flower of Magsingal</h3>
+      <p>Php 80</p>
+      <button onclick="addToBasket('Hand Crafts Flower of Magsingal', 80, './Magsingal/Hand Crafts of Magsingal.png')">Add to Cart</button>
+    </div>
+   
+    
+  <!-- Product Section 4 -->
+  
+    <div class="product-card">
+      <img src="./San juan/Untitled-2.png" alt="Dried Mango of Candon">
+      <h3>Bambo Bag by San Juan </h3>
+      <p>Php 150</p>
+      <button onclick="addToBasket('Bambo Bag by San Juan', 150, './San juan/Untitled-2.png')">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="./Santa/Untitled-2.png" alt="Calamay of Candon">
+      <h3>Garden set tools by Santa </h3>
+      <p>Php 250</p>
+      <button onclick="addToBasket('Garden set tools by Santa ', 250, './Santa/Untitled-2.png')">Add to Cart</button>
+    </div>
+  </div>
+
+
+  <!-- Basket Overlay --><div class="basket-overlay" id="basket-overlay">
+    <div class="basket-header">Your Basket</div>
+    
+    <div class="basket-items" id="basket-items">
+        <!-- Cart items will be dynamically added here -->
+    </div>
+    
+    <div class="basket-total" id="basket-total">Total: Php 0</div>
+    
+    <!-- Payment Method, Delivery Address, Delivery Option, and Voucher Code Section -->
+    <div class="basket-options">
+        <!-- Payment Method -->
+        <div class="payment-method">
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" class="payment-method">
+                <option value="default">Select Payment Method</option>
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="cash-on-delivery">Cash on Delivery</option>
+            </select>
+        </div>
+        
+        <!-- Delivery Address -->
+        <div class="delivery-address">
+            <label for="delivery-address">Delivery Address:</label>
+            <select id="delivery-address" class="delivery-address">
+                <option value="default">Select Delivery Address</option>
+                <option value="home">Home Address</option>
+                <option value="work">Work Address</option>
+                <option value="other">Other Address</option>
+            </select>
+        </div>
+
+        <!-- Delivery Option -->
+        <div class="delivery-option">
+            <label for="delivery-option">Delivery Option:</label>
+            <select id="delivery-option" class="delivery-option">
+                <option value="standard" data-price="0">Standard Delivery (Free)</option>
+                <option value="express" data-price="50">Express Delivery (Php 50)</option>
+            </select>
+        </div>
+
+        <!-- Voucher Code -->
+        <div class="voucher-code">
+            <label for="voucher-code">Voucher Code:</label>
+            <input type="text" id="voucher-code" placeholder="Enter voucher code">
+            <button id="apply-voucher">Apply</button>
+            <span id="voucher-message"></span>
+        </div>
+    </div>
+
+    <div class="basket-buttons">
+        <button class="checkout">Checkout</button>
+        <button class="close" onclick="toggleBasket()">Close</button>
+    </div>
+</div>
+
+<script src="./FUNCTION 1.js"></script>
+<script src="./FUNCTION 2.js"></script>
+<script src="./FUNTION 3.js"></script> 
+<!-- function 3 is search bar function 2 is the check out tc function 1 is basket function -->
+
+
+
+<div class="banner-container">
+  <div class="slider" style="background-image: url('https://t3.ftcdn.net/jpg/08/88/03/80/360_F_888038041_zNVaUTvBlyqPGMEYnZq0Uaw8Nea4zXjV.jpg'); background-size: cover; background-position: center;">
+      <div class="slider-content">
+          <div class="slider-item">
+              <span class="text"></span>"Relish the Journey, Share the Memory – Ilocano Pasalubong from the Heart."</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <div class="footer-container">
+    <div class="footer">
+      
+  
+      
+  
+        <div class="payment-methods">
+           
+            <img src="./gcash.png" alt="GCASH">
+            <img src="./pnb.png" alt="PNB">
+            <img src="./bpi.png" alt="BPI">
+            <img src="./SEABANK.png" alt="Shop">
+            <img src="./LANDBANK.png" alt="Visa">
+            <img src="./MASTERCARD.png" alt="MasterCard">
+            <img src="./UNION PAY.png" alt="UnionPay">
+        </div>
+  
+        <div class="copyright">
+            &copy; Juan Ilocos Sur  <br>
+            Powered by Juan De Ilocos 
+        </div>
+    </div>
+  </div>
+  
+  <style>
+    .footer-container {
+        background-color: #f1f1f1;
+        padding: 20px;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer .links a {
+        color: #000;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    .footer .links a:hover {
+        text-decoration: underline;
+    }
+    .footer .social-icons {
+        margin: 10px 0;
+    }
+    .footer .social-icons img {
+        width: 30px;
+        margin: 0 5px;
+    }
+    .footer .payment-methods img {
+        width: 50px;
+        margin: 0 5px;
+    }
+    .footer .copyright {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #666;
+    }
+  </style>
+  </html>
+  
+</body>
+</html>

@@ -1,0 +1,121 @@
+.container {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-image: url('./01-Ilocos-Sur-Vigan-Travel.png'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image fully covers the container */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    height: auto; /* Adjust container height based on content */
+    width: 100%; /* Ensures the container takes up full width */
+    padding-top: 100px; /* Optional: Adds some space at the top */
+}
+
+.categories-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #4A4A4A;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Flexbox layout for categories */
+.categories {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
+    gap: 20px; /* Adds space between categories */
+    padding: 0 10px;
+}
+
+.category {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    width: 250px; /* Ensures all categories are the same width */
+    height: 250px; /* Sets a fixed height for the categories */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.category a {
+    display: block;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.category-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.category img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.category p {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.category:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); /* Change background gradient */
+}
+
+.category:hover img {
+    transform: scale(1.2); /* Zoom effect on image */
+}
+
+.category:hover p {
+    color: #222; /* Darker text color on hover */
+}
+
+/* Media Queries for smaller screens */
+@media screen and (max-width: 768px) {
+    .categories {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Adjust grid layout for tablets */
+    }
+
+    .category p {
+        font-size: 16px; /* Slightly smaller text */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .categories {
+        grid-template-columns: repeat(1, 1fr); /* Single column on very small screens */
+    }
+
+    .category p {
+        font-size: 14px; /* Even smaller text for small screens */
+    }
+}

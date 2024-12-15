@@ -1,0 +1,97 @@
+
+  .basket-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .basket-overlay.open {
+    transform: translateX(0);
+  }
+
+  .basket-header {
+    padding: 10px;
+    background-color: #d30202;
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .basket-items {
+    padding: 20px;
+    overflow-y: auto; /* Enables vertical scrolling */
+    max-height: calc(100% - 160px); /* Adjust height to fit within the overlay */
+  }
+
+  .basket-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .basket-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  .basket-total {
+    padding: 15px;
+    background: #f4f4f4;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .basket-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    background: #333;
+  }
+
+  .basket-buttons button {
+    padding: 10px 15px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .basket-header {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+    position: relative; /* For positioning the close icon */
+}
+
+.close-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.close-icon:hover {
+    color: #e63946; /* Change color on hover */
+}
+
+  .basket-buttons .close {
+    background: #1b980d;
+  }
+

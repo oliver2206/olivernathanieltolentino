@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cart-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .cart-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item img {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #ccc;
+        }
+
+        .cart-item-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .cart-item-details p {
+            margin: 5px 0;
+        }
+
+        .cart-item .remove {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .cart-total {
+            text-align: right;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .cart-actions {
+            text-align: right;
+        }
+
+        .cart-actions button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .checkout {
+            background: blue;
+            color: white;
+        }
+
+        .home {
+            background: green;
+            color: white;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <div class="cart-header">Your Shopping Cart</div>
+        
+        <!-- Cart Item 1 -->
+        <div class="cart-item">
+            <img src="./Untitled-2.png" alt="Item 1">
+            <div class="cart-item-details">
+                <p><strong>Cabisilan Rice Coffee of Galimuyod </strong></p>
+                <p>Price: <span class="item-price">75</span></p>
+                <label>Quantity: <input type="number" value="1" min="1" class="item-quantity"></label>
+            </div>
+            <button class="remove">Remove</button>
+        </div>
+
+        <!-- Additional items can be added here -->
+
+        <!-- Total Section -->
+        <div class="cart-total">Total: Php <span id="cart-total">80</span></div>
+
+        <!-- Action Buttons -->
+        <div class="cart-actions">
+            <button class="checkout">Proceed to Checkout</button>
+            <a href=""><button class="home">Home</button></a>
+        </div>
+    </div>
+
+    <script>
+        // Function to calculate the total price
+        function calculateTotal() {
+            const items = document.querySelectorAll('.cart-item');
+            let total = 0;
+
+            items.forEach(item => {
+                const price = parseFloat(item.querySelector('.item-price').textContent);
+                const quantity = parseInt(item.querySelector('.item-quantity').value);
+                total += price * quantity;
+            });
+
+            document.getElementById('cart-total').textContent = total.toFixed(2);
+        }
+
+        // Add event listener for quantity changes
+        document.querySelectorAll('.item-quantity').forEach(input => {
+            input.addEventListener('input', calculateTotal);
+        });
+
+        // Remove item functionality
+        document.querySelectorAll('.remove').forEach(button => {
+            button.addEventListener('click', function () {
+                this.closest('.cart-item').remove();
+                calculateTotal();
+            });
+        });
+
+        // Initial calculation
+        calculateTotal();
+    </script>
+</body>
+</html>

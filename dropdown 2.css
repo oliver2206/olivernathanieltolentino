@@ -1,0 +1,26 @@
+.dropdown {
+    position: relative; /* Ensures the menu is positioned relative to the parent */
+    display: inline-block;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+    padding: 10px;
+    display: block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.452);
+    border: 1px solid #312828;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-height: 200px; /* Set the maximum height of the dropdown */
+    overflow-y: auto; /* Enable vertical scrolling */
+    width: 200px; /* Adjust width as needed */
+    z-index: 1000; /* Keeps it above other elements */
+}
+
+.dropdown-menu a:hover {
+    background-color: #2005a9b8;
+}
